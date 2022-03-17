@@ -1,0 +1,12 @@
+diff --git a/security/Makefile b/security/Makefile
+index 18121f8f8..69d1dfddd 100644
+--- a/security/Makefile
++++ b/security/Makefile
+@@ -24,6 +24,7 @@ obj-$(CONFIG_SECURITY_LOCKDOWN_LSM)	+= lockdown/
+ obj-$(CONFIG_CGROUPS)			+= device_cgroup.o
+ obj-$(CONFIG_BPF_LSM)			+= bpf/
+ obj-$(CONFIG_SECURITY_LANDLOCK)		+= landlock/
++obj-$(CONFIG_SECURITY_RBAC_LSM)		+= rbac/
+ 
+ # Object integrity file lists
+ obj-$(CONFIG_INTEGRITY)			+= integrity/

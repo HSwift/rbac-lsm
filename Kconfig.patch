@@ -1,0 +1,21 @@
+diff --git a/security/Kconfig b/security/Kconfig
+index 0b847f435..3af86348a 100644
+--- a/security/Kconfig
++++ b/security/Kconfig
+@@ -228,6 +228,7 @@ source "security/yama/Kconfig"
+ source "security/safesetid/Kconfig"
+ source "security/lockdown/Kconfig"
+ source "security/landlock/Kconfig"
++source "security/rbac/Kconfig"
+ 
+ source "security/integrity/Kconfig"
+ 
+@@ -271,7 +272,7 @@ config LSM
+ 	default "landlock,lockdown,yama,loadpin,safesetid,integrity,apparmor,selinux,smack,tomoyo,bpf" if DEFAULT_SECURITY_APPARMOR
+ 	default "landlock,lockdown,yama,loadpin,safesetid,integrity,tomoyo,bpf" if DEFAULT_SECURITY_TOMOYO
+ 	default "landlock,lockdown,yama,loadpin,safesetid,integrity,bpf" if DEFAULT_SECURITY_DAC
+-	default "landlock,lockdown,yama,loadpin,safesetid,integrity,selinux,smack,tomoyo,apparmor,bpf"
++	default "landlock,lockdown,yama,loadpin,safesetid,integrity,selinux,smack,tomoyo,apparmor,bpf,rbac"
+ 	help
+ 	  A comma-separated list of LSMs, in initialization order.
+ 	  Any LSMs left off this list will be ignored. This can be

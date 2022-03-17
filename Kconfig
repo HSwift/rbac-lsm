@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: GPL-2.0-only
+
+config SECURITY_RBAC_LSM
+	bool "RBAC LSM support"
+	depends on SECURITY
+	select SECURITYFS
+	select SECURITY_PATH
+	help
+	  Build support for RBAC 
